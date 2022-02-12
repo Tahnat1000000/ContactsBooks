@@ -108,7 +108,7 @@ def createNewContactWindow(contactIndex = -1):
                     contacts.remove(contacts[contactIndex])
                     with open(os.path.join(os.getcwd(), "ContactsBooks", contactBookName + ".txt"), "w") as file:
                         for contact in contacts:
-                            file.write(f"{funcs.capitalName(firstname)}, {funcs.capitalName(lastname)}, {birthday}, {phone}, {email}\n")
+                            file.write(contact)
                         file.close()
                 else:
                     with open(os.path.join(os.getcwd(), "ContactsBooks", contactBookName + ".txt"), "a") as file:
